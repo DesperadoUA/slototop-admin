@@ -52,7 +52,7 @@
                     {title: 'Static Pages', thumbnail: 'https://admin.onlinecasino.ua/img/static_page.png', link: '/admin/static-pages'},
                     {title: 'Casino', thumbnail: 'https://admin.onlinecasino.ua/img/casino.png', link: '/admin/casino'},
                     {title: 'Poker', thumbnail: 'https://admin.onlinecasino.ua/img/blog.png', link: '/admin/poker'},
-                    {title: 'Games', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/slot'},
+                    {title: 'Games', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/game'},
                     {title: 'Country', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/country'},
                     {title: 'Currency', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/currency'},
                     {title: 'Bonuses', thumbnail: 'https://admin.onlinecasino.ua/img/bonuses.png', link: '/admin/bonus'},

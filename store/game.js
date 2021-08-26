@@ -1,5 +1,6 @@
-import DAL from '../DAL/slots'
-const POST_TYPE = 'slot'
+import DAL_Builder from '~/DAL/builder'
+const POST_TYPE = 'game'
+const DIRECTION = 'games'
 export const state = () => ({
     [POST_TYPE]: {
         currentPage: {},
@@ -50,11 +51,18 @@ export const mutations = {
 }
 export const actions = {
     async setPosts({commit}, data) {
-        const result = await DAL.getPosts(data)
+        const request = new DAL_Builder()
+        const result = await request.setDirection(DIRECTION)
+                                    .setData(data)
+                                    .get()
         if(result.data.confirm === 'ok') commit('setPosts', result.data)
     },
     async setCurrentPost({commit}, data) {
-        const result = await DAL.getPostById(data)
+        const request = new DAL_Builder()
+        const result = await request.postType(POST_TYPE)
+                                    .url(data.url)
+                                    .setData(data)
+                                    .get()
         if(result.data.confirm === 'ok')  commit('setCurrentPost', result.data.body)
     },
     changeStateCurrentPost({commit}, data) {
@@ -67,7 +75,10 @@ export const actions = {
         commit('setNewPost', data)
     },
     async setPaginationPage({commit}, data) {
-        const result = await DAL.getPosts(data)
+        const request = new DAL_Builder()
+        const result = await request.setDirection(DIRECTION)
+                                    .setData(data)
+                                    .get()
         const pageData = {
             lang: data.lang === 1 ? 'ru' : 'ua',
             page: data.offset/data.limit + 1
@@ -78,16 +89,28 @@ export const actions = {
         } 
     },
     async updateCurrentPost({commit}, data) {
-        const result = await DAL.updatePost(data)
+        const request = new DAL_Builder()
+        await request.postType(POST_TYPE)
+                     .url('update')
+                     .setData(data)
+                     .get()
     },
     async addNewPost({commit}, data) {
-        const result = await DAL.add(data)
+        const request = new DAL_Builder()
+        const result = await request.postType(POST_TYPE)
+                                    .url('store')
+                                    .setData(data)
+                                    .get()
         if(result.data.confirm === 'ok') {
             commit('setInsert', result.data.insert_id)
         }
     },
     async deleteCurrentPost({commit}, data) {
-        const result = await DAL.delete(data)
+        const request = new DAL_Builder()
+        const result = await request.postType(POST_TYPE)
+                                    .url('delete')
+                                    .setData(data)
+                                    .get()
         if(result.data.confirm === 'ok') {
             commit('setDeleteCurrentPost', true)
         }

@@ -8,10 +8,10 @@
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </postMeta>
-    <postRelative v-if='data.body' 
+    <!--<postRelative v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
-    </postRelative>
+    </postRelative> -->
     <v-container>
         <v-row>
           <v-col class="offset-1 col-10 mt-5 mb-10">
@@ -43,11 +43,11 @@
 
 <script>
 import commonEdit from '~/components/templates/commonEdit'
-import postMeta from '~/components/templates/meta/Slot'
-import postRelative from '~/components/templates/relative/Slot'
+import postMeta from '~/components/templates/meta/Game'
+import postRelative from '~/components/templates/relative/Game'
 import snackeBar from '~/components/templates/snackbar'
     export default {
-        name: "singleSlotPage",
+        name: "singleGamePage",
         layout: 'admin',
         components: {commonEdit, postMeta, snackeBar, postRelative},
         async mounted() {
@@ -62,7 +62,7 @@ import snackeBar from '~/components/templates/snackbar'
         },
         data(){
           return {
-              POST_TYPE: 'slot',
+              POST_TYPE: 'game',
               data:{
                 body: undefined
               },

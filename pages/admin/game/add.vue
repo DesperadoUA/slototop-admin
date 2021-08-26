@@ -23,7 +23,7 @@
 <script>
 import commonAdd from '~/components/templates/commonAdd.vue'
     export default {
-        name: "singleCasinoAdd",
+        name: "singleGameAdd",
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
@@ -31,16 +31,16 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                title:  '',
                status: 'public',
                lang: 'ru',
-               post_type: 'slot',
-               slug: 'slots',
+               post_type: 'game',
+               slug: 'game',
                meta_title: '',
                description: '',
                keywords: '',
                short_desc: '',
                h1: '',
                content: '',
-               update_at: new Date().toJSON().slice(0,10),
-               create_at: new Date().toJSON().slice(0,10),
+               updated_at: new Date().toJSON().slice(0,10),
+               created_at: new Date().toJSON().slice(0,10),
                thumbnail: ''
            }
            this.$store.dispatch(this.POST_TYPE + '/setNewPost', this.data.body)
@@ -50,7 +50,7 @@ import commonAdd from '~/components/templates/commonAdd.vue'
               data:{
                 body: undefined
               },
-              POST_TYPE: 'slot'
+              POST_TYPE: 'game'
           }
         },
         methods: {

@@ -92,6 +92,7 @@
 </template>
 
 <script>
+    /* TO DO: review component */
     import MM_Multiple_Input_Text from '../../lib/MM_Multiple_Input_Text'
     import MM_Input from '../../lib/MM_Input'
     import MM_Rating from '../../lib/MM_Rating'
@@ -106,4 +107,4 @@
             return {}
         }
     }
-</script>
+</script> 

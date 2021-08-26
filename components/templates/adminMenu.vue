@@ -460,7 +460,7 @@
                     {title:'POKER', url:'/admin/poker', icon:'mdi-cards-spade'},
                     {title:'VENDORS', url:'/admin/vendor', icon:'mdi-android-studio'},
                     {title:'PAYMENTS', url:'/admin/payment', icon:'mdi-cash'},
-                    {title:'GAMES', url:'/admin/slot', icon:'mdi-gamepad-variant'},
+                    {title:'GAMES', url:'/admin/game', icon:'mdi-gamepad-variant'},
                     {title:'COUNTRY', url:'/admin/country', icon:'mdi-globe-model'},
                     {title:'CURRENCY', url:'/admin/currency', icon:'mdi-currency-brl'},
                     {title:'BONUSES', url:'/admin/bonus', icon:'mdi-wallet-giftcard'},
@@ -482,8 +482,8 @@
                     { title: 'Add payments', link: '/admin/payment/add' }
                 ],
                 slotsPage: [
-                    { title: 'All slots', link: '/admin/slot' },
-                    { title: 'Add slots', link: '/admin/slot/add' }
+                    { title: 'All slots', link: '/admin/game' },
+                    { title: 'Add slots', link: '/admin/game/add' }
                 ],
                 bonusesPage: [
                     { title: 'All bonuses', link: '/admin/bonus' },
