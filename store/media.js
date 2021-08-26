@@ -1,4 +1,4 @@
-import DAL_Media from '../DAL/media'
+import DAL_Media from '~/DAL/media'
 export const state = () => ({
     media: {
         list: []

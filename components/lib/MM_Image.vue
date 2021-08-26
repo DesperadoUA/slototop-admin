@@ -50,7 +50,7 @@
                           base64: reader.result
                         }
                     }
-                    const result = await axios.post(config.API_URL+'admin/uploads', data)
+                    const result = await axios.post(config.API_URL+'uploads', data)
                     this.current_value = result.data.src   
                     const obj = {
                       key: this.action_key,

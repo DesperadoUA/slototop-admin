@@ -9,21 +9,10 @@
                     :action_key = '"ref"'
                     />
                 <MM_Input
-                    :value = 'data.license'
+                    :value = 'data.phone'
                     :action = 'action' 
-                    :title = '"License"' 
-                    :action_key = '"license"'
-                    />
-                <MM_Image v-if = 'data' 
-                    :value = 'data.icon' 
-                    :title = '"Icon"'
-                    :action = 'action'
-                    :action_key = '"icon"' />
-                <MM_Input
-                    :value = 'data.faq_title'
-                    :action = 'action' 
-                    :title = '"Faq title"' 
-                    :action_key = '"faq_title"'
+                    :title = '"Phone"' 
+                    :action_key = '"phone"'
                     />
                 <MM_Multiple_Input_Text 
                     :value = 'data.faq'
@@ -38,64 +27,11 @@
                     :action_key = '"rating"'
                 />
                 <MM_Checkbox 
-                    :value = 'data.regular_offers'
+                    :value = 'data.close'
                     :action = 'action' 
-                    :title = '"Regular offers"' 
-                    :action_key = '"regular_offers"'
+                    :title = '"Close"' 
+                    :action_key = '"close"'
                 />
-                <MM_Checkbox 
-                    :value = 'data.live_chat'
-                    :action = 'action' 
-                    :title = '"Live chat"' 
-                    :action_key = '"live_chat"'
-                />
-                <MM_Checkbox 
-                    :value = 'data.live_casino'
-                    :action = 'action' 
-                    :title = '"Live casino"' 
-                    :action_key = '"live_casino"'
-                />
-                <MM_Checkbox 
-                    :value = 'data.vip_program'
-                    :action = 'action' 
-                    :title = '"Vip program"' 
-                    :action_key = '"vip_program"'
-                />
-                <MM_Input
-                    :value = 'data.bonus'
-                    :action = 'action' 
-                    :title = '"Bonus value"' 
-                    :action_key = '"bonus"'
-                />
-                <MM_Input
-                    :value = 'data.bonus_wagering'
-                    :action = 'action' 
-                    :title = '"Bonus wagering"' 
-                    :action_key = '"bonus_wagering"'
-                />
-                <MM_Input
-                    :value = 'data.freespins'
-                    :action = 'action' 
-                    :title = '"Freespins"' 
-                    :action_key = '"freespins"'
-                />
-                <MM_Input
-                    :value = 'data.freespins_wagering'
-                    :action = 'action' 
-                    :title = '"Freespins wagering"' 
-                    :action_key = '"freespins_wagering"'
-                />
-                <MM_Multiple_Two_Input
-                    :value = 'data.details'
-                    :action = 'action' 
-                    :title = '"Details"' 
-                    :action_key = '"details"'
-                    />
-                <MM_Multiple_Options  
-                    :value = 'data.type_games'
-                    :action = 'action' 
-                    :title = '"Type games"' 
-                    :action_key = '"type_games"'/>
                 <MM_Input
                     :value = 'data.min_deposit'
                     :action = 'action' 
@@ -103,11 +39,53 @@
                     :action_key = '"min_deposit"'
                     />
                 <MM_Input
-                    :value = 'data.min_payout'
+                    :value = 'data.min_payments'
                     :action = 'action' 
-                    :title = '"Min payout"' 
-                    :action_key = '"min_payout"'
+                    :title = '"Min payments"' 
+                    :action_key = '"min_payments"'
                     />
+                <MM_Input
+                    :value = 'data.email'
+                    :action = 'action' 
+                    :title = '"Email"' 
+                    :action_key = '"email"'
+                    />
+                <MM_Input
+                    :value = 'data.chat'
+                    :action = 'action' 
+                    :title = '"Chat"' 
+                    :action_key = '"chat"'
+                    />
+                <MM_Input
+                    :value = 'data.year'
+                    :action = 'action' 
+                    :title = '"Year"' 
+                    :action_key = '"year"'
+                    />
+                <MM_Input
+                    :value = 'data.site'
+                    :action = 'action' 
+                    :title = '"Site"' 
+                    :action_key = '"site"'
+                    />
+                <MM_Input
+                    :value = 'data.withdrawal'
+                    :action = 'action' 
+                    :title = '"Withdrawal"' 
+                    :action_key = '"withdrawal"'
+                    />
+                <MM_Input
+                    :value = 'data.number_games'
+                    :action = 'action' 
+                    :title = '"Number games"' 
+                    :action_key = '"number_games"'
+                    />
+                <!--<MM_Multiple_Two_Input
+                    :value = 'data.details'
+                    :action = 'action' 
+                    :title = '"Details"' 
+                    :action_key = '"details"'
+                    />-->
             </v-col>
         </v-row>
     </v-container>
@@ -120,7 +98,6 @@
     import MM_Multiple_Input from '../../lib/MM_Multiple_Input'
     import MM_Checkbox from '../../lib/MM_Checkbox'
     import MM_Multiple_Two_Input from '../../lib/MM_Multiple_Two_Input'
-    import MM_Multiple_Options from '../../lib/MM_Multiple_Options'
     export default {
         name: "casinoMeta",
         props: ['data', 'action'],

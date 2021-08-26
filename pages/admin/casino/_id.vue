@@ -4,11 +4,11 @@
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </commonEdit> 
-   <!-- <postMeta v-if='data.body' 
+    <postMeta v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </postMeta>
-    <postRelative v-if='data.body' 
+    <!--<postRelative v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </postRelative> -->

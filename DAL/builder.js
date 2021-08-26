@@ -45,7 +45,7 @@ export default class JsonRequest {
                 })
         } 
         else if(this.#options.POST_TYPE === 'pages') {
-            return axios.get(this.#options.URL_API + this.#options.POST_TYPE+'/' + this.#options.URL)
+            return axios.get(this.#options.URL_API + this.#options.POST_TYPE + '/' + this.#options.URL)
         }
         else if(this.#options.DIRECTION !== '') {
             return axios.post(this.#options.URL_API + this.#options.DIRECTION, this.#options.DATA)

@@ -43,7 +43,7 @@
                 <v-card >
                   <v-card-text class="black">
                     <div v-if="tab == 'tab-2'">
-                      <Search :postType="POST_TYPE" :lang="'2'" />
+                      <Search :postType="POST_DB" :lang="'2'" />
                       <CategoryLoop :data="postsUa" />
                       <TotalPosts :data="data.ua.total" />
                       <MM_Paginations :length = "Math.ceil(data.ua.total/numnerPostOnPage)"
@@ -54,7 +54,7 @@
                        />
                     </div>
                     <div v-else>
-                      <Search :postType="POST_TYPE" :lang="'1'" />
+                      <Search :postType="POST_DB" :lang="'1'" />
                       <CategoryLoop :data="postsRu" />
                       <TotalPosts :data="data.ru.total" />
                       <MM_Paginations :length = "Math.ceil(data.ru.total/numnerPostOnPage)" 
@@ -118,6 +118,7 @@
         data(){
           return {
               POST_TYPE: 'casino',
+              POST_DB: 'casinos',
               data: {
                   ru: {
                       post_slug: 'casino',

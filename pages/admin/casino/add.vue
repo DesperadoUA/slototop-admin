@@ -39,8 +39,8 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                short_desc: '',
                h1: '',
                content: '',
-               update_at: new Date().toJSON().slice(0,10),
-               create_at: new Date().toJSON().slice(0,10),
+               updated_at: new Date().toJSON().slice(0,10),
+               created_at: new Date().toJSON().slice(0,10),
                thumbnail: ''
            }
            this.$store.dispatch(this.POST_TYPE + '/setNewPost', this.data.body)
