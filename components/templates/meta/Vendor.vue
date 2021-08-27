@@ -2,35 +2,42 @@
     <v-container>
         <v-row>
             <v-col class="mt-0">
+                <MM_Rating 
+                    :value = 'data.rating'
+                    :action = 'action' 
+                    :title = '"Rating"' 
+                    :action_key = '"rating"'
+                />
                 <MM_Input
-                    :value = 'data.faq_title'
+                    :value = 'data.year'
                     :action = 'action' 
-                    :title = '"Faq title"' 
-                    :action_key = '"faq_title"'
+                    :title = '"Year"' 
+                    :action_key = '"year"'
                     />
-                <MM_Multiple_Input_Text 
-                    :value = 'data.faq'
+                <MM_Input
+                    :value = 'data.license'
                     :action = 'action' 
-                    :title = '"Faq"' 
-                    :action_key = '"faq"'
+                    :title = '"License"' 
+                    :action_key = '"license"'
                     />
-                <MM_Image v-if = 'data' 
-                    :value = 'data.icon' 
-                    :title = '"Icon"'
-                    :action = 'action'
-                    :action_key = '"icon"' />
+                <MM_Input
+                    :value = 'data.number_games'
+                    :action = 'action' 
+                    :title = '"Number games"' 
+                    :action_key = '"number_games"'
+                    />
             </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
-    import MM_Multiple_Input_Text from '../../lib/MM_Multiple_Input_Text'
     import MM_Input from '../../lib/MM_Input'
+    import MM_Rating from '../../lib/MM_Rating'
     export default {
         name: "vendorMeta",
         props: ['data', 'action'],
-        components: {MM_Multiple_Input_Text, MM_Input},
+        components: {MM_Input, MM_Rating},
         data() {
             return {}
         },

@@ -43,7 +43,7 @@
                 <v-card >
                   <v-card-text class="black">
                     <div v-if="tab == 'tab-2'">
-                      <Search :postType="POST_TYPE" :lang="'2'" />
+                      <Search :postType="POST_DB" :lang="'2'" />
                       <CategoryLoop :data="postsUa" />
                       <TotalPosts :data="data.ua.total" />
                       <MM_Paginations :length = "Math.ceil(data.ua.total/numnerPostOnPage)"
@@ -54,7 +54,7 @@
                        />
                     </div>
                     <div v-else>
-                      <Search :postType="POST_TYPE" :lang="'1'" />
+                      <Search :postType="POST_DB" :lang="'1'" />
                       <CategoryLoop :data="postsRu" />
                       <TotalPosts :data="data.ru.total" />
                       <MM_Paginations :length = "Math.ceil(data.ru.total/numnerPostOnPage)" 
@@ -79,9 +79,10 @@
    import CategoryLoop from '~/components/templates/categoryLoop'
    import TotalPosts from '~/components/templates/totalPosts'
    import MM_Paginations from '~/components/lib/MM_Paginations'
-   import Search from '~/components/templates/search'
-    export default {
-        name: "vendors",
+   import Search from '~/components/templates/search.vue'
+  
+  export default {
+        name: "vendor",
         layout: 'admin',
         component: {CategoryLoop, TotalPosts, MM_Paginations, Search},
         async mounted() {
@@ -112,20 +113,21 @@
             const total = this.$store.getters[this.POST_TYPE + '/getTotal']
             this.data.ru.total = total.ru
             this.data.ua.total = total.ua
-
+        
         },
         data(){
           return {
               POST_TYPE: 'vendor',
+              POST_DB: 'vendors',
               data: {
                   ru: {
-                      post_slug: 'vendors',
+                      post_slug: 'vendor',
                       lang: 'ru',
                       posts: [],
                       total: 0
                   },
                   ua: {
-                      post_slug: 'vendors',
+                      post_slug: 'vendor',
                       lang: 'ua',
                       posts: [],
                       total: 0
