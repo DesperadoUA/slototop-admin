@@ -32,7 +32,7 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                status: 'public',
                lang: 'ru',
                post_type: 'payment',
-               slug: 'payments',
+               slug: 'payment',
                meta_title: '',
                description: '',
                keywords: '',

@@ -2,29 +2,23 @@
     <v-container>
         <v-row>
             <v-col class="mt-0">
-                <MM_Rating
-                        :value = 'data.rating'
-                        :action = 'action'
-                        :title = '"Rating"'
-                        :action_key = '"rating"'
-                />
                 <MM_Input
-                    :value = 'data.faq_title'
+                    :value = 'data.site'
                     :action = 'action' 
-                    :title = '"Faq title"' 
-                    :action_key = '"faq_title"'
-                    />
-                <MM_Multiple_Input_Text 
-                    :value = 'data.faq'
-                    :action = 'action' 
-                    :title = '"Faq"' 
-                    :action_key = '"faq"'
+                    :title = '"Site"' 
+                    :action_key = '"site"'
                     />
                 <MM_Input
-                    :value = 'data.short_text'
+                    :value = 'data.withdrawal'
                     :action = 'action' 
-                    :title = '"Short text"' 
-                    :action_key = '"short_text"'
+                    :title = '"withdrawal"' 
+                    :action_key = '"withdrawal"'
+                    />
+                <MM_Input
+                    :value = 'data.commission'
+                    :action = 'action' 
+                    :title = '"commission"' 
+                    :action_key = '"commission"'
                     />
             </v-col>
         </v-row>
@@ -32,12 +26,11 @@
 </template>
 
 <script>
-    import MM_Multiple_Input_Text from '../../lib/MM_Multiple_Input_Text'
     import MM_Input from '../../lib/MM_Input'
     export default {
         name: "paymentMeta",
         props: ['data', 'action'],
-        components: {MM_Multiple_Input_Text, MM_Input},
+        components: {MM_Input},
         data() {
             return {}
         },
