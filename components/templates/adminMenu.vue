@@ -502,8 +502,8 @@
                     { title: 'Add currency', link: '/admin/currency/add' }
                 ],
                 langPage: [
-                    { title: 'All languages', link: '/admin/language' },
-                    { title: 'Add language', link: '/admin/language/add' }
+                    { title: 'All languages', link: '/admin/lang' },
+                    { title: 'Add language', link: '/admin/lang/add' }
                 ],
                 licensePage: [
                     { title: 'All licenses', link: '/admin/license' },
