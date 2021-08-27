@@ -23,7 +23,7 @@
 <script>
 import commonAdd from '~/components/templates/commonAdd'
     export default {
-        name: "singleTechnologyAdd",
+        name: "singleTypePaymentAdd",
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
@@ -31,8 +31,8 @@ import commonAdd from '~/components/templates/commonAdd'
                title:  '',
                status: 'public',
                lang: 'ru',
-               post_type: 'technology',
-               slug: 'technology',
+               post_type: 'type-payment',
+               slug: 'type-payment',
                meta_title: '',
                description: '',
                keywords: '',
@@ -50,7 +50,7 @@ import commonAdd from '~/components/templates/commonAdd'
               data:{
                 body: undefined
               },
-              POST_TYPE: 'technology'
+              POST_TYPE: 'type-payment'
           }
         },
         methods: {
