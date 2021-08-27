@@ -9,16 +9,16 @@
                     :action_key = '"category"'
                     />
             <MM_Relative_Posts 
-                    :value = 'data.slot_casino'
-                    :action = 'action' 
-                    :title = '"Relative casino"' 
-                    :action_key = '"slot_casino"'
-                    />
-            <MM_Relative_Posts 
-                    :value = 'data.slot_vendor'
+                    :value = 'data.casino_vendor'
                     :action = 'action' 
                     :title = '"Relative vendor"' 
-                    :action_key = '"slot_vendor"'
+                    :action_key = '"casino_vendor"'
+                    />
+            <MM_Relative_Posts 
+                    :value = 'data.casino_payment'
+                    :action = 'action' 
+                    :title = '"Relative payment"' 
+                    :action_key = '"casino_payment"'
                     />
             </v-col>
         </v-row>
@@ -28,7 +28,7 @@
 <script>
     import MM_Relative_Posts from '~/components/lib/MM_Relative_Posts'
     export default {
-        name: "slotCategory",
+        name: "currencyCategory",
         props: ['data', 'action'],
         components: {MM_Relative_Posts},
         data() {

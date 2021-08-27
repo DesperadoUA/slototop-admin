@@ -26,9 +26,9 @@
 </template>
 
 <script>
-    import MM_Relative_Posts from '../../../components/lib/MM_Relative_Posts'
+    import MM_Relative_Posts from '~/components/lib/MM_Relative_Posts'
     export default {
-        name: "casinoCategory",
+        name: "countryCategory",
         props: ['data', 'action'],
         components: {MM_Relative_Posts},
         data() {
