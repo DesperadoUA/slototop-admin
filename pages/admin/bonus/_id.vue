@@ -8,10 +8,10 @@
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </postMeta>
-    <postRelative v-if='data.body' 
+    <!--<postRelative v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
-    </postRelative>
+    </postRelative> -->
     <v-container>
         <v-row>
           <v-col class="offset-1 col-10 mt-5 mb-10">
@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import commonEdit from '~/components/templates/commonEdit.vue'
+import commonEdit from '~/components/templates/commonEdit'
 import postMeta from '~/components/templates/meta/Bonus'
 import postRelative from '~/components/templates/relative/Bonus'
 import snackeBar from '~/components/templates/snackbar'
     export default {
-        name: "singleBonusesPage",
+        name: "singleBonusPage",
         layout: 'admin',
         components: {commonEdit, postMeta, snackeBar, postRelative},
         async mounted() {

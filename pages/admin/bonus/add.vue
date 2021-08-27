@@ -23,7 +23,7 @@
 <script>
 import commonAdd from '~/components/templates/commonAdd.vue'
     export default {
-        name: "singleBonusesAdd",
+        name: "singleBonusAdd",
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
@@ -32,15 +32,15 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                status: 'public',
                lang: 'ru',
                post_type: 'bonus',
-               slug: 'bonuses',
+               slug: 'bonus',
                meta_title: '',
                description: '',
                keywords: '',
                short_desc: '',
                h1: '',
                content: '',
-               update_at: new Date().toJSON().slice(0,10),
-               create_at: new Date().toJSON().slice(0,10),
+               updated_at: new Date().toJSON().slice(0,10),
+               created_at: new Date().toJSON().slice(0,10),
                thumbnail: ''
            }
            this.$store.dispatch(this.POST_TYPE + '/setNewPost', this.data.body)

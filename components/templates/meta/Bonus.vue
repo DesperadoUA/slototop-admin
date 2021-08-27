@@ -2,29 +2,35 @@
     <v-container>
         <v-row>
             <v-col class="mt-0">
-                <MM_Rating 
-                    :value = 'data.rating'
+                <MM_Multiple_Input
+                    :value = 'data.ref'
                     :action = 'action' 
-                    :title = '"Rating"' 
-                    :action_key = '"rating"'
-                />
-                <MM_Input
-                    :value = 'data.bonus'
-                    :action = 'action' 
-                    :title = '"Bonus value"' 
-                    :action_key = '"bonus"'
-                />
-                <MM_Input
-                    :value = 'data.bonus_wagering'
-                    :action = 'action' 
-                    :title = '"Bonus wagering"' 
-                    :action_key = '"bonus_wagering"'
-                />
+                    :title = '"Referal link"' 
+                    :action_key = '"ref"'
+                    />
                 <MM_Checkbox 
-                    :value = 'data.show_on_main'
+                    :value = 'data.close'
                     :action = 'action' 
-                    :title = '"Show on main page"' 
-                    :action_key = '"show_on_main"'
+                    :title = '"Close"' 
+                    :action_key = '"close"'
+                />
+                <MM_Input
+                    :value = 'data.wager'
+                    :action = 'action' 
+                    :title = '"Bonus wager"' 
+                    :action_key = '"wager"'
+                />
+                <MM_Input
+                    :value = 'data.number_use'
+                    :action = 'action' 
+                    :title = '"Bonus number use"' 
+                    :action_key = '"number_use"'
+                />
+                <MM_Input
+                    :value = 'data.value_bonus'
+                    :action = 'action' 
+                    :title = '"Value bonus"' 
+                    :action_key = '"value_bonus"'
                 />
             </v-col>
         </v-row>
@@ -32,20 +38,15 @@
 </template>
 
 <script>
-    import MM_Multiple_Input_Text from '../../lib/MM_Multiple_Input_Text'
     import MM_Input from '../../lib/MM_Input'
-    import MM_Rating from '../../lib/MM_Rating'
-    import MM_Multiple_Input from '../../lib/MM_Multiple_Input'
     import MM_Checkbox from '../../lib/MM_Checkbox'
+    import MM_Multiple_Input from '../../lib/MM_Multiple_Input'
     export default {
         name: "bonusMeta",
         props: ['data', 'action'],
-        components: {MM_Multiple_Input_Text, MM_Input, MM_Rating, MM_Multiple_Input, MM_Checkbox},
+        components: {MM_Input, MM_Checkbox, MM_Multiple_Input},
         data() {
             return {}
-        },
-        mounted(){
-            console.log(this.data)
         }
     }
 </script>

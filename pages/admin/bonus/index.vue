@@ -3,7 +3,7 @@
     <v-container class="container--fluid">
       <v-row>
         <v-col class="offset-1 col-10 mt-10">
-          <h1 class="page_title font-podkova-bold">Bonus</h1>
+          <h1 class="page_title font-podkova-bold">Bonuses</h1>
         </v-col>
       </v-row>
       <v-row>
@@ -43,7 +43,7 @@
                 <v-card >
                   <v-card-text class="black">
                     <div v-if="tab == 'tab-2'">
-                      <Search :postType="POST_TYPE" :lang="'2'" />
+                      <Search :postType="POST_DB" :lang="'2'" />
                       <CategoryLoop :data="postsUa" />
                       <TotalPosts :data="data.ua.total" />
                       <MM_Paginations :length = "Math.ceil(data.ua.total/numnerPostOnPage)"
@@ -54,7 +54,7 @@
                        />
                     </div>
                     <div v-else>
-                      <Search :postType="POST_TYPE" :lang="'1'" />
+                      <Search :postType="POST_DB" :lang="'1'" />
                       <CategoryLoop :data="postsRu" />
                       <TotalPosts :data="data.ru.total" />
                       <MM_Paginations :length = "Math.ceil(data.ru.total/numnerPostOnPage)" 
@@ -80,7 +80,8 @@
    import TotalPosts from '~/components/templates/totalPosts'
    import MM_Paginations from '~/components/lib/MM_Paginations'
    import Search from '~/components/templates/search.vue'
-    export default {
+  
+  export default {
         name: "bonus",
         layout: 'admin',
         component: {CategoryLoop, TotalPosts, MM_Paginations, Search},
@@ -112,11 +113,12 @@
             const total = this.$store.getters[this.POST_TYPE + '/getTotal']
             this.data.ru.total = total.ru
             this.data.ua.total = total.ua
-
+        
         },
         data(){
           return {
               POST_TYPE: 'bonus',
+              POST_DB: 'bonuses',
               data: {
                   ru: {
                       post_slug: 'bonus',
