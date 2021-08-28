@@ -472,52 +472,74 @@
                 casinoPage: [
                     { title: 'All casino', link: '/admin/casino' },
                     { title: 'Add casino', link: '/admin/casino/add' },
-                    { title: 'Category casino', link: '/admin/casino/category' },
+                    { title: 'All category casino', link: '/admin/casino/category' },
                     { title: 'Add category casino', link: '/admin/casino/category/add' }
                 ],
                 vendorsPage: [
                     { title: 'All vendors', link: '/admin/vendor' },
-                    { title: 'Add vendors', link: '/admin/vendor/add' }
+                    { title: 'Add vendors', link: '/admin/vendor/add' },
+                    { title: 'All category vendors', link: '/admin/vendor/category' },
+                    { title: 'Add category vendors', link: '/admin/vendor/category/add' }
                 ],
                 paymentsPage: [
                     { title: 'All payments', link: '/admin/payment' },
-                    { title: 'Add payments', link: '/admin/payment/add' }
+                    { title: 'Add payments', link: '/admin/payment/add' },
+                    { title: 'All category payments', link: '/admin/payment/category' },
+                    { title: 'Add category payments', link: '/admin/payment/category/add' }
                 ],
                 slotsPage: [
-                    { title: 'All slots', link: '/admin/game' },
-                    { title: 'Add slots', link: '/admin/game/add' }
+                    { title: 'All games', link: '/admin/game' },
+                    { title: 'Add games', link: '/admin/game/add' },
+                    { title: 'All category games', link: '/admin/game/category' },
+                    { title: 'Add category games', link: '/admin/game/category/add' }
                 ],
                 bonusesPage: [
                     { title: 'All bonuses', link: '/admin/bonus' },
-                    { title: 'Add bonus', link: '/admin/bonus/add' }
+                    { title: 'Add bonus', link: '/admin/bonus/add' },
+                    { title: 'All category bonuses', link: '/admin/bonus/category' },
+                    { title: 'Add category bonuses', link: '/admin/bonus/category/add' }
                 ],
                 pokerPage: [
                     { title: 'All pokers', link: '/admin/poker' },
-                    { title: 'Add poker', link: '/admin/poker/add' }
+                    { title: 'Add poker', link: '/admin/poker/add' },
+                    { title: 'All category poker', link: '/admin/poker/category' },
+                    { title: 'Add category poker', link: '/admin/poker/category/add' }
                 ],
                 countryPage: [
                     { title: 'All country', link: '/admin/country' },
-                    { title: 'Add country', link: '/admin/country/add' }
+                    { title: 'Add country', link: '/admin/country/add' },
+                    { title: 'All category country', link: '/admin/country/category' },
+                    { title: 'Add category country', link: '/admin/country/category/add' }
                 ],
                 currencyPage: [
                     { title: 'All currency', link: '/admin/currency' },
-                    { title: 'Add currency', link: '/admin/currency/add' }
+                    { title: 'Add currency', link: '/admin/currency/add' },
+                    { title: 'All category currency', link: '/admin/currency/category' },
+                    { title: 'Add category currency', link: '/admin/currency/category/add' }
                 ],
                 langPage: [
                     { title: 'All languages', link: '/admin/lang' },
-                    { title: 'Add language', link: '/admin/lang/add' }
+                    { title: 'Add language', link: '/admin/lang/add' },
+                    { title: 'All category language', link: '/admin/lang/category' },
+                    { title: 'Add category language', link: '/admin/lang/category/add' }
                 ],
                 licensePage: [
                     { title: 'All licenses', link: '/admin/license' },
-                    { title: 'Add licenses', link: '/admin/license/add' }
+                    { title: 'Add licenses', link: '/admin/license/add' },
+                    { title: 'All category license', link: '/admin/license/category' },
+                    { title: 'Add category license', link: '/admin/license/category/add' }
                 ],
                 technologyPage: [
                     { title: 'All technology', link: '/admin/technology' },
-                    { title: 'Add technology', link: '/admin/technology/add' }
+                    { title: 'Add technology', link: '/admin/technology/add' },
+                    { title: 'All category technology', link: '/admin/technology/category' },
+                    { title: 'Add category technology', link: '/admin/technology/category/add' }
                 ],
                 typePaymentPage: [
                     { title: 'All type payment', link: '/admin/type-payment' },
-                    { title: 'Add type payment', link: '/admin/type-payment/add' }
+                    { title: 'Add type payment', link: '/admin/type-payment/add' },
+                    { title: 'All category type payment', link: '/admin/type-payment/category' },
+                    { title: 'Add category type payment', link: '/admin/type-payment/category/add' }
                 ]
             }
         },
