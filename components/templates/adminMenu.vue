@@ -39,15 +39,6 @@
           <v-btn
                   class="deep-orange darken-2 justify-start display_block mb-5 font-podkova-bold"
                   dark
-                  exact
-                  no-prefetch
-                  to="/admin/category">
-            <v-icon left color="white">mdi-checkbox-multiple-blank</v-icon>
-            Category
-          </v-btn>
-          <v-btn
-                  class="deep-orange darken-2 justify-start display_block mb-5 font-podkova-bold"
-                  dark
                   no-prefetch
                   to="/admin/settings">
             <v-icon left color="white">mdi-message-draw</v-icon>
@@ -69,7 +60,6 @@
             <v-icon left color="white">mdi-share-variant</v-icon>
             Options
           </v-btn>
-
           <v-menu
                   transition="slide-y-transition"
                   bottom
@@ -430,7 +420,6 @@
               </v-list-item>
             </v-list>
           </v-menu>
-
         </v-layout>
         <v-layout class="justify-space-around mt-3 align-center">
           <v-btn class="deep-orange darken-2 display_block justify-start" color="deep-orange darken-2 font-podkova-bold"
