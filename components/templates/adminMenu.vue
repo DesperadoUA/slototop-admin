@@ -471,7 +471,9 @@
                 ],
                 casinoPage: [
                     { title: 'All casino', link: '/admin/casino' },
-                    { title: 'Add casino', link: '/admin/casino/add' }
+                    { title: 'Add casino', link: '/admin/casino/add' },
+                    { title: 'Category casino', link: '/admin/casino/category' },
+                    { title: 'Add category casino', link: '/admin/casino/category/add' }
                 ],
                 vendorsPage: [
                     { title: 'All vendors', link: '/admin/vendor' },

@@ -64,6 +64,7 @@
                       key: this.action_key,
                       value: this.chips
                     }
+                    console.log(this.action)
             this.$store.dispatch(this.action, currenData) 
           }
         },

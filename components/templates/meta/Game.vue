@@ -73,9 +73,6 @@
         components: {MM_Multiple_Input_Text, MM_Input, MM_Multiple_Input, MM_Checkbox, MM_Characters_Game},
         data() {
             return {}
-        },
-        mounted(){
-            console.log(this.data)
         }
     }
 </script>
