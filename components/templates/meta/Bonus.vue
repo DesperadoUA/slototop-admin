@@ -38,9 +38,9 @@
 </template>
 
 <script>
-    import MM_Input from '../../lib/MM_Input'
-    import MM_Checkbox from '../../lib/MM_Checkbox'
-    import MM_Multiple_Input from '../../lib/MM_Multiple_Input'
+    import MM_Input from '~/components/lib/MM_Input'
+    import MM_Checkbox from '~/components/lib/MM_Checkbox'
+    import MM_Multiple_Input from '~/components/lib/MM_Multiple_Input'
     export default {
         name: "bonusMeta",
         props: ['data', 'action'],

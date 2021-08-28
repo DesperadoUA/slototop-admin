@@ -32,8 +32,8 @@
 </template>
 
 <script>
-    import MM_Input from '../../lib/MM_Input'
-    import MM_Rating from '../../lib/MM_Rating'
+    import MM_Input from '~/components/lib/MM_Input'
+    import MM_Rating from '~/components/lib/MM_Rating'
     export default {
         name: "vendorMeta",
         props: ['data', 'action'],

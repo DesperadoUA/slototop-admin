@@ -26,7 +26,7 @@
 </template>
 
 <script>
-    import MM_Input from '../../lib/MM_Input'
+    import MM_Input from '~/components/lib/MM_Input'
     export default {
         name: "paymentMeta",
         props: ['data', 'action'],

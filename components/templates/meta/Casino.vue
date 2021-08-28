@@ -80,29 +80,30 @@
                     :title = '"Number games"' 
                     :action_key = '"number_games"'
                     />
-                <!--<MM_Multiple_Two_Input
-                    :value = 'data.details'
+                <MM_Review
+                    :value = 'data.reviews'
                     :action = 'action' 
-                    :title = '"Details"' 
-                    :action_key = '"details"'
-                    />-->
+                    :title = '"Reviews"' 
+                    :action_key = '"reviews"'
+                    />
             </v-col>
         </v-row>
     </v-container>
 </template>
 
 <script>
-    /* TO DO: review component */
-    import MM_Multiple_Input_Text from '../../lib/MM_Multiple_Input_Text'
-    import MM_Input from '../../lib/MM_Input'
-    import MM_Rating from '../../lib/MM_Rating'
-    import MM_Multiple_Input from '../../lib/MM_Multiple_Input'
-    import MM_Checkbox from '../../lib/MM_Checkbox'
-    import MM_Multiple_Two_Input from '../../lib/MM_Multiple_Two_Input'
+    import MM_Multiple_Input_Text from '~/components/lib/MM_Multiple_Input_Text'
+    import MM_Input from '~/components/lib/MM_Input'
+    import MM_Rating from '~/components/lib/MM_Rating'
+    import MM_Multiple_Input from '~/components/lib/MM_Multiple_Input'
+    import MM_Checkbox from '~/components/lib/MM_Checkbox'
+    import MM_Multiple_Two_Input from '~/components/lib/MM_Multiple_Two_Input'
+    import MM_Review from '~/components/lib/MM_Review'
     export default {
         name: "casinoMeta",
         props: ['data', 'action'],
-        components: {MM_Multiple_Input_Text, MM_Input, MM_Rating, MM_Multiple_Input, MM_Checkbox, MM_Multiple_Two_Input},
+        components: {MM_Multiple_Input_Text, MM_Input, MM_Rating, MM_Multiple_Input, 
+        MM_Checkbox, MM_Multiple_Two_Input, MM_Review},
         data() {
             return {}
         }
