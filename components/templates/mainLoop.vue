@@ -62,7 +62,6 @@
                     {title: 'Vendors', thumbnail: 'https://admin.onlinecasino.ua/img/vendors.png', link: '/admin/vendor'},
                     {title: 'Technology', thumbnail: 'https://admin.onlinecasino.ua/img/vendors.png', link: '/admin/technology'},
                     {title: 'Type payment', thumbnail: 'https://admin.onlinecasino.ua/img/vendors.png', link: '/admin/type-payment'},
-                    {title: 'Category', thumbnail: 'https://admin.onlinecasino.ua/img/category.png', link: '/admin/category'},
                     {title: 'Settings', thumbnail: 'https://admin.onlinecasino.ua/img/settings.png', link: '/admin/settings'},
                     {title: 'Options', thumbnail: 'https://admin.onlinecasino.ua/img/options.png', link: '/admin/options'},
                 ]

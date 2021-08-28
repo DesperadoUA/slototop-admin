@@ -452,7 +452,6 @@
                 drawer: false,
                 links: [
                     {title:'MAIN', url:'/admin', icon:'mdi-bank'},
-                    {title:'CATEGORY', url:'/admin/category', icon:'mdi-checkbox-multiple-blank'},
                     {title:'SETTINGS', url:'/admin/settings', icon:'mdi-message-draw'},
                     {title:'STATIC PAGES', url:'/admin/static-pages', icon:'mdi-checkbox-multiple-blank'},
                     {title:'OPTIONS', url:'/admin/options', icon:'mdi-share-variant'},
