@@ -8,7 +8,7 @@
                     :title = '"Relative category"' 
                     :action_key = '"category"'
                     />
-            <MM_Relative_Posts 
+           <!-- <MM_Relative_Posts 
                     :value = 'data.casino_vendor'
                     :action = 'action' 
                     :title = '"Relative vendor"' 
@@ -19,7 +19,7 @@
                     :action = 'action' 
                     :title = '"Relative payment"' 
                     :action_key = '"casino_payment"'
-                    />
+                    /> -->
             </v-col>
         </v-row>
     </v-container>
