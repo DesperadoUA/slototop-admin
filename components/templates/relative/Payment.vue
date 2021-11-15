@@ -8,6 +8,18 @@
                     :title = '"Relative category"' 
                     :action_key = '"category"'
                     />
+            <MM_Relative_Posts 
+                    :value = 'data.payment_currency'
+                    :action = 'action' 
+                    :title = '"Relative currency"' 
+                    :action_key = '"payment_currency"'
+                    />
+            <MM_Relative_Posts 
+                    :value = 'data.payment_type_payment'
+                    :action = 'action' 
+                    :title = '"Relative type payment"' 
+                    :action_key = '"payment_type_payment"'
+                    />
             </v-col>
         </v-row>
     </v-container>

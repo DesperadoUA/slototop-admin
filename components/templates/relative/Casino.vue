@@ -38,6 +38,18 @@
                     :title = '"Relative type payment"' 
                     :action_key = '"casino_type_payment"'
                     />
+           <MM_Relative_Posts 
+                    :value = 'data.casino_payment'
+                    :action = 'action' 
+                    :title = '"Relative payment"' 
+                    :action_key = '"casino_payment"'
+                    />
+           <MM_Relative_Posts 
+                    :value = 'data.casino_type_bonus'
+                    :action = 'action' 
+                    :title = '"Relative type bonus"' 
+                    :action_key = '"casino_type_bonus"'
+                    />
             <MM_Relative_Posts 
                     :value = 'data.casino_technology'
                     :action = 'action' 

@@ -46,7 +46,7 @@ import adminCategoryRelative from '~/components/templates/adminCategoryRelative'
 import snackeBar from '~/components/templates/snackbar'
 import postMeta from '~/components/templates/meta/Category'
     export default {
-        name: "singlePaymentCategoryPage",
+        name: "singleTypeBonusCategoryPage",
         layout: 'admin',
         components: {commonEdit, snackeBar, adminCategoryRelative, postMeta},
         async mounted() {
@@ -61,8 +61,8 @@ import postMeta from '~/components/templates/meta/Category'
         },
         data(){
           return {
-              POST_TYPE: 'payment_category',
-              PATH_CATEGORY: 'payment/category',
+              POST_TYPE: 'type_bonus_category',
+              PATH_CATEGORY: 'type-bonus/category',
               data:{
                 body: undefined
               },

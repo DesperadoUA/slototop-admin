@@ -23,7 +23,7 @@
 <script>
 import commonAdd from '~/components/templates/commonAdd.vue'
     export default {
-        name: "singlePaymentAdd",
+        name: "singleTypeBonusCategoryAdd",
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
@@ -31,8 +31,8 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                title:  '',
                status: 'public',
                lang: 'ru',
-               post_type: 'payment',
-               slug: 'payment',
+               post_type: 'type-bonus/category',
+               slug: 'type-bonus/category',
                meta_title: '',
                description: '',
                keywords: '',
@@ -50,7 +50,8 @@ import commonAdd from '~/components/templates/commonAdd.vue'
               data:{
                 body: undefined
               },
-              POST_TYPE: 'payment'
+              POST_TYPE: 'type_bonus_category',
+              PATH_CATEGORY: 'type-bonus/category',
           }
         },
         methods: {
@@ -64,7 +65,7 @@ import commonAdd from '~/components/templates/commonAdd.vue'
             if(data.data.title !== '') {
                 await this.$store.dispatch(this.POST_TYPE + '/addNewPost', data)
                 const insertId = this.$store.getters[this.POST_TYPE + '/getInsertId']
-                if(insertId !== '') this.$router.push(`/admin/${this.POST_TYPE}/${insertId}`)
+                if(insertId !== '') this.$router.push(`/admin/${this.PATH_CATEGORY}/${insertId}`)
             } 
             else {
                 alert('Title empty')

@@ -2,6 +2,12 @@
     <v-container>
         <v-row>
             <v-col class="mt-0">
+                <MM_Rating 
+                    :value = 'data.rating' 
+                    :title = '"Rating"'
+                    :action = 'action'
+                    :action_key = '"rating"' 
+                />
                 <MM_Image 
                     :value = 'data.banner' 
                     :title = '"Banner"'
@@ -55,7 +61,13 @@
                     :action = 'action' 
                     :title = '"Characters"' 
                     :action_key = '"characters"' 
-                />            
+                />     
+                <MM_Multiple_Two_Input_Image 
+                    :value = 'data.gallery'
+                    :action = 'action' 
+                    :title = '"Gallery"' 
+                    :action_key = '"gallery"' 
+                />       
             </v-col>
         </v-row>
     </v-container>
@@ -67,10 +79,13 @@
     import MM_Multiple_Input from '~/components/lib/MM_Multiple_Input'
     import MM_Checkbox from '~/components/lib/MM_Checkbox'
     import MM_Characters_Game from '~/components/lib/MM_Characters_Game'    
+    import MM_Multiple_Two_Input_Image from '~/components/lib/MM_Multiple_Two_Input_Image' 
+    import MM_Rating from '~/components/lib/MM_Rating' 
     export default {
         name: "slotMeta",
         props: ['data', 'action'],
-        components: {MM_Multiple_Input_Text, MM_Input, MM_Multiple_Input, MM_Checkbox, MM_Characters_Game},
+        components: {MM_Multiple_Input_Text, MM_Input, MM_Multiple_Input, MM_Checkbox, MM_Characters_Game, 
+        MM_Multiple_Two_Input_Image, MM_Rating},
         data() {
             return {}
         }

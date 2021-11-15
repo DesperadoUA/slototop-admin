@@ -106,7 +106,7 @@
                           base64: reader.result
                         }
                     }
-                    const result = await axios.post(config.API_URL+'admin/uploads', data)
+                    const result = await axios.post(config.API_URL+'uploads', data)
                     this.currenData[index].src = result.data.src
                     const currenData = {
                       key: this.action_key,

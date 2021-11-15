@@ -1,17 +1,17 @@
 <template>
   <div>
-     <commonEdit v-if='data.body' 
+    <commonEdit v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
-    </commonEdit>
+    </commonEdit> 
     <postMeta v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </postMeta>
-    <adminCategoryRelative v-if='data.body' 
+    <postRelative v-if='data.body' 
                      :data = "data.body"
-                     :action = 'POST_TYPE + "/changeStateCurrentPost"'> 
-    </adminCategoryRelative>
+                     :action = 'POST_TYPE + "/changeStateCurrentPost"'>
+    </postRelative>
     <v-container>
         <v-row>
           <v-col class="offset-1 col-10 mt-5 mb-10">
@@ -20,6 +20,7 @@
                   text
                   @click="update()"
           >
+          <v-icon left color="white">mdi-content-save</v-icon>
             Update
           </v-btn>
           <v-btn
@@ -42,13 +43,13 @@
 
 <script>
 import commonEdit from '~/components/templates/commonEdit'
-import adminCategoryRelative from '~/components/templates/adminCategoryRelative'
+import postMeta from '~/components/templates/meta/TypeBonus'
+import postRelative from '~/components/templates/relative/TypeBonus'
 import snackeBar from '~/components/templates/snackbar'
-import postMeta from '~/components/templates/meta/Category'
     export default {
-        name: "singlePaymentCategoryPage",
+        name: "singleTypeBonusPage",
         layout: 'admin',
-        components: {commonEdit, snackeBar, adminCategoryRelative, postMeta},
+        components: {commonEdit, postMeta, snackeBar, postRelative},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             const data = {
@@ -61,8 +62,7 @@ import postMeta from '~/components/templates/meta/Category'
         },
         data(){
           return {
-              POST_TYPE: 'payment_category',
-              PATH_CATEGORY: 'payment/category',
+              POST_TYPE: 'type-bonus',
               data:{
                 body: undefined
               },
@@ -96,11 +96,12 @@ import postMeta from '~/components/templates/meta/Category'
               }
               await this.$store.dispatch(this.POST_TYPE + '/deleteCurrentPost', data)
               const confirmDelete = this.$store.getters[this.POST_TYPE + '/getConfirmDelete']
-              if(confirmDelete) this.$router.push('/admin/' + this.PATH_CATEGORY)
+              if(confirmDelete) this.$router.push('/admin/' + this.POST_TYPE)
           }
         }
     }
 </script>
 
 <style scoped>
+
 </style>

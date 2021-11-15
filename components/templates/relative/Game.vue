@@ -13,13 +13,13 @@
                     :action = 'action' 
                     :title = '"Relative casino"' 
                     :action_key = '"slot_casino"'
-                    />
+                    />-->
             <MM_Relative_Posts 
-                    :value = 'data.slot_vendor'
+                    :value = 'data.game_vendor'
                     :action = 'action' 
                     :title = '"Relative vendor"' 
-                    :action_key = '"slot_vendor"'
-                    /> -->
+                    :action_key = '"game_vendor"'
+                    />
             </v-col>
         </v-row>
     </v-container>

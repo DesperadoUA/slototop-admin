@@ -20,6 +20,12 @@
                     :title = '"commission"' 
                     :action_key = '"commission"'
                     />
+                <MM_Input
+                    :value = 'data.withdrawal_period'
+                    :action = 'action' 
+                    :title = '"Withdrawal period"' 
+                    :action_key = '"withdrawal_period"'
+                    />
             </v-col>
         </v-row>
     </v-container>

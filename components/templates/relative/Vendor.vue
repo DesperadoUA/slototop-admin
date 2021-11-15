@@ -8,6 +8,12 @@
                     :title = '"Relative category"' 
                     :action_key = '"category"'
                     />
+            <MM_Relative_Posts 
+                    :value = 'data.vendor_country'
+                    :action = 'action' 
+                    :title = '"Relative country"' 
+                    :action_key = '"vendor_country"'
+                    />
             </v-col>
         </v-row>
     </v-container>

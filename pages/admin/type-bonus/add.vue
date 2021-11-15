@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import commonAdd from '~/components/templates/commonAdd.vue'
+import commonAdd from '~/components/templates/commonAdd'
     export default {
-        name: "singlePaymentAdd",
+        name: "singleTypeBonusAdd",
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
@@ -31,8 +31,8 @@ import commonAdd from '~/components/templates/commonAdd.vue'
                title:  '',
                status: 'public',
                lang: 'ru',
-               post_type: 'payment',
-               slug: 'payment',
+               post_type: 'type-bonus',
+               slug: 'type-bonus',
                meta_title: '',
                description: '',
                keywords: '',
@@ -50,7 +50,7 @@ import commonAdd from '~/components/templates/commonAdd.vue'
               data:{
                 body: undefined
               },
-              POST_TYPE: 'payment'
+              POST_TYPE: 'type-bonus'
           }
         },
         methods: {

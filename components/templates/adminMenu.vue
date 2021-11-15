@@ -420,6 +420,36 @@
               </v-list-item>
             </v-list>
           </v-menu>
+          <v-menu
+                  transition="slide-y-transition"
+                  bottom
+                  no-prefetch
+                  class="d-block"
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                      class="deep-orange mt-5 darken-2 justify-start display_block font-podkova-bold"
+                      dark
+                      v-bind="attrs"
+                      v-on="on"
+              >
+                <v-icon left>mdi-folder-multiple-outline</v-icon>
+                Type bonus
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item
+                      no-prefetch
+                      class="font-podkova-bold"
+                      v-for="(item, i) in typeBonusPage"
+                      :key="i" :to="item.link"
+              >
+                <v-list-item-title>
+                  {{ item.title }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
         </v-layout>
         <v-layout class="justify-space-around mt-3 align-center">
           <v-btn class="deep-orange darken-2 display_block justify-start" color="deep-orange darken-2 font-podkova-bold"
@@ -455,7 +485,8 @@
                     {title:'LANG', url:'/admin/lang', icon:'mdi-google-translate'},
                     {title:'LICENSES', url:'/admin/license', icon:'mdi-license'},
                     {title:'TECHNOLOGY', url:'/admin/technology', icon:'mdi-math-compass'},
-                    {title:'TYPE PAYMENT', url:'/admin/type-payment', icon:'mdi-contactless-payment'}
+                    {title:'TYPE PAYMENT', url:'/admin/type-payment', icon:'mdi-contactless-payment'},
+                    {title:'TYPE BONUS', url:'/admin/type-bonus', icon:'mdi-contactless-payment'}
                 ],
                 casinoPage: [
                     { title: 'All casino', link: '/admin/casino' },
@@ -528,6 +559,12 @@
                     { title: 'Add type payment', link: '/admin/type-payment/add' },
                     { title: 'All category type payment', link: '/admin/type-payment/category' },
                     { title: 'Add category type payment', link: '/admin/type-payment/category/add' }
+                ],
+                typeBonusPage: [
+                    { title: 'All type bonus', link: '/admin/type-bonus' },
+                    { title: 'Add type bonus', link: '/admin/type-bonus/add' },
+                    { title: 'All category type bonus', link: '/admin/type-bonus/category' },
+                    { title: 'Add category type bonus', link: '/admin/type-bonus/category/add' }
                 ]
             }
         },

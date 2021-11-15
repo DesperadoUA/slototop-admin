@@ -4,6 +4,10 @@
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'>
     </commonEdit>
+    <postMeta v-if='data.body' 
+                     :data = "data.body"
+                     :action = 'POST_TYPE + "/changeStateCurrentPost"'>
+    </postMeta>
     <adminCategoryRelative v-if='data.body' 
                      :data = "data.body"
                      :action = 'POST_TYPE + "/changeStateCurrentPost"'> 
@@ -40,10 +44,11 @@
 import commonEdit from '~/components/templates/commonEdit'
 import adminCategoryRelative from '~/components/templates/adminCategoryRelative'
 import snackeBar from '~/components/templates/snackbar'
+import postMeta from '~/components/templates/meta/Category'
     export default {
         name: "singleTypePaymentCategoryPage",
         layout: 'admin',
-        components: {commonEdit, snackeBar, adminCategoryRelative},
+        components: {commonEdit, snackeBar, adminCategoryRelative, postMeta},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             const data = {

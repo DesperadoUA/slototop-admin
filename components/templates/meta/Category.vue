@@ -2,11 +2,11 @@
     <v-container>
         <v-row>
             <v-col class="mt-0">
-            <MM_Relative_Posts 
-                    :value = 'data.category'
+                <MM_Multiple_Input_Text 
+                    :value = 'data.faq'
                     :action = 'action' 
-                    :title = '"Relative category"' 
-                    :action_key = '"category"'
+                    :title = '"Faq"' 
+                    :action_key = '"faq"'
                     />
             </v-col>
         </v-row>
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-    import MM_Relative_Posts from '~/components/lib/MM_Relative_Posts'
+    import MM_Multiple_Input_Text from '~/components/lib/MM_Multiple_Input_Text'
     export default {
-        name: "technologyCategory",
+        name: "categoryMeta",
         props: ['data', 'action'],
-        components: {MM_Relative_Posts},
+        components: {MM_Multiple_Input_Text},
         data() {
             return {}
         }

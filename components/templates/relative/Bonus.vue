@@ -8,12 +8,24 @@
                     :title = '"Relative category"' 
                     :action_key = '"category"'
                     />
-            <!--<MM_Relative_Posts 
+            <MM_Relative_Posts 
+                    :value = 'data.bonus_type_bonus'
+                    :action = 'action' 
+                    :title = '"Relative type bonus"' 
+                    :action_key = '"bonus_type_bonus"'
+                    />
+            <MM_Relative_Posts 
+                    :value = 'data.bonus_country'
+                    :action = 'action' 
+                    :title = '"Relative country"' 
+                    :action_key = '"bonus_country"'
+                    />
+            <MM_Relative_Posts 
                     :value = 'data.bonus_casino'
                     :action = 'action' 
                     :title = '"Relative casino"' 
                     :action_key = '"bonus_casino"'
-                    />-->
+                    />
             </v-col>
         </v-row>
     </v-container>
