@@ -13,7 +13,7 @@
                     prepend-icon="mdi-tooltip-edit"
                     type="text"
                     color="deep-orange darken-2"
-                    v-model="currenData[index].value_1"
+                    v-model="currenData[index].review_name"
                     @change="change"
                   ></v-text-field>
                 </v-col>
@@ -23,7 +23,7 @@
                     prepend-icon="mdi-tooltip-edit"
                     type="text"
                     color="deep-orange darken-2"
-                    v-model="currenData[index].value_2"
+                    v-model="currenData[index].review_rating"
                     @change="change"
                   ></v-text-field>
                 </v-col>
@@ -33,7 +33,7 @@
                     prepend-icon="mdi-tooltip-edit"
                     type="text"
                     color="deep-orange darken-2"
-                    v-model="currenData[index].value_3"
+                    v-model="currenData[index].date"
                     @change="change"
                   ></v-text-field>
                 </v-col>
@@ -43,7 +43,7 @@
                     prepend-icon="mdi-tooltip-edit"
                     type="text"
                     color="deep-orange darken-2"
-                    v-model="currenData[index].value_4"
+                    v-model="currenData[index].review_text"
                     @change="change"
                   ></v-textarea>
                 </v-col>
@@ -84,10 +84,10 @@
         methods: {
             addItem(){
               this.currenData.unshift({
-                value_1: '',
-                value_2: '',
-                value_3: '',
-                value_4: ''
+                  review_name: '',
+                  review_rating: '',
+                  date: '',
+                  review_text: ''
               })
               const currenData = {
                       key: this.action_key,

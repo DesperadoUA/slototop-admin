@@ -94,10 +94,28 @@
               prepend-icon="mdi-tooltip-edit"
               type="text"
               color="deep-orange darken-2"
-              class="media-text"
+              class="media-text mr-4"
               readonly="readonly"
               v-model="text"
           ></v-text-field>
+          <v-btn
+                  color="red lighten-2"
+                  dark
+                  class="deep-orange darken-2 font-podkova-bold"
+                  v-if="text !== ''"
+                  @click="alignLeft"
+          >
+            <v-icon>mdi-arrow-left-bold</v-icon>
+          </v-btn>
+          <v-btn
+                  color="red lighten-2"
+                  dark
+                  class="deep-orange darken-2 font-podkova-bold"
+                  v-if="text !== ''"
+                  @click="alignRight"
+          >
+            <v-icon>mdi-arrow-right-bold</v-icon>
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -109,12 +127,13 @@ import MM_Image from '../lib/MM_Image.vue'
    export default {
     data () {
       return {
-        dialog: false,
-        tab: null,
-        value: [],
-        numberPostOnQuery: 30,
-        postCurrentPage: 1,
-        text: ''
+          dialog: false,
+          tab: null,
+          value: [],
+          numberPostOnQuery: 30,
+          postCurrentPage: 1,
+          text: '',
+          src: ''
       }
     },
     async mounted() {
@@ -136,13 +155,14 @@ import MM_Image from '../lib/MM_Image.vue'
             },
         },
     methods: {
-      postShowMore(){
+        postShowMore(){
         this.postCurrentPage += 1
       },
-      choiceImg(item){
-         this.text = `<img src="${item}" />`
+        choiceImg(item){
+            this.src = item
+            this.text = `<img src="${item}" />`
       },
-      deleteImg(item) {
+        deleteImg(item) {
         const user = this.$store.getters['user/getUser']
         const data = {
             session: user.session,
@@ -150,7 +170,13 @@ import MM_Image from '../lib/MM_Image.vue'
             file: item
         }
         this.$store.dispatch('media/deleteMedia', data)
-      }
+      },
+        alignLeft() {
+            this.text = `<img src="${this.src}" class="alignLeft" />`
+        },
+        alignRight() {
+            this.text = `<img src="${this.src}" class="alignRight" />`
+        }
     },
     components:{MM_Image}
   }

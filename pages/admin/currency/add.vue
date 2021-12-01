@@ -29,7 +29,7 @@ import commonAdd from '~/components/templates/commonAdd'
         mounted() {   
            this.data.body = {
                title:  '',
-               status: 'public',
+               status: 'hide',
                lang: 'ru',
                post_type: 'currency',
                slug: 'currency',

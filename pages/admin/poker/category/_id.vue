@@ -37,6 +37,7 @@
                :text = "snackbar.text"
                :timeout = "snackbar.timeout"
     />
+    <postPreview v-if='data.body'  slug="pokers" :permalink="data.body.permalink" />
   </div>
 </template>
 
@@ -45,10 +46,11 @@ import commonEdit from '~/components/templates/commonEdit'
 import adminCategoryRelative from '~/components/templates/adminCategoryRelative'
 import snackeBar from '~/components/templates/snackbar'
 import postMeta from '~/components/templates/meta/Category'
+import postPreview from '~/components/lib/MM_Post_Preview'
     export default {
         name: "singlePokerCategoryPage",
         layout: 'admin',
-        components: {commonEdit, snackeBar, adminCategoryRelative, postMeta},
+        components: {commonEdit, snackeBar, adminCategoryRelative, postMeta, postPreview},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             const data = {

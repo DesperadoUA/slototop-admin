@@ -38,6 +38,7 @@
                :text = "snackbar.text"
                :timeout = "snackbar.timeout"
     />
+    <postPreview v-if='data.body'  slug="currency" :permalink="data.body.permalink" />
   </div>
 </template>
 
@@ -46,10 +47,11 @@ import commonEdit from '~/components/templates/commonEdit'
 import postMeta from '~/components/templates/meta/Currency'
 import postRelative from '~/components/templates/relative/Currency'
 import snackeBar from '~/components/templates/snackbar'
+import postPreview from '~/components/lib/MM_Post_Preview'
     export default {
         name: "singleCurrencyPage",
         layout: 'admin',
-        components: {commonEdit, postMeta, snackeBar, postRelative},
+        components: {commonEdit, postMeta, snackeBar, postRelative, postPreview},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             const data = {
