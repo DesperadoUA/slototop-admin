@@ -13,6 +13,11 @@
                                 :title = 'data.title'
                                 :action = 'action'
                                 :action_key = '"value"' />
+                    <MM_Multiple_Input v-if = "data.editor === 'multiple_input'"
+                                :value = 'data.value'
+                                :action = 'action'
+                                :title = 'data.title'
+                                :action_key = '"value"' />
 
            </v-col>
       </v-row>
@@ -38,12 +43,12 @@
 </template>
 
 <script>
-
-import snackeBar from '~/components/templates/snackbar'
+    import MM_Multiple_Input from '~/components/lib/MM_Multiple_Input'
+    import snackeBar from '~/components/templates/snackbar'
     export default {
         name: "singleOptions",
         layout: 'admin',
-        components: {snackeBar},
+        components: {snackeBar, MM_Multiple_Input},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             const data = {
@@ -53,6 +58,7 @@ import snackeBar from '~/components/templates/snackbar'
             }
             await this.$store.dispatch('options/setCurrentPage', data)
             this.data = this.$store.getters['options/getCurrentPage']
+            console.log(this.data)
         },
         data(){
           return {
